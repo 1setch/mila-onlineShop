@@ -1,0 +1,28 @@
+:root{
+    --color-dark: #212121; //g800
+    --color-light: #FFFFFF;
+    --color-gray: #6D6D6D;//g500
+    --color-gray-alt: #DADADA;//g200
+    --color-brand: #E8E4DF;
+    --color-accent: #B79987; //beaver
+
+    --border: 1px solid var(--color-dark);
+    --border-radius: 20px;
+    --border-radius-small: 4px;
+
+
+    --font-family-base: 'Space Grotesk', sans-serif;
+
+    --container-width: 1400px;
+    --container-padding-x: 90px;
+    
+    @include mobile {
+        --container-padding-x: 20px;
+    }
+
+
+    --button-height: 56px;
+
+    --transition-duration: 0.2s;
+
+}
