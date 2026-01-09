@@ -1,12 +1,11 @@
+import HomePage from "./pages/Home/HomePage"
 
 
 function App() {
 
   return (
     <>
-      <p >
-        Click on the Vite and React logos to learn more
-      </p>
+      <HomePage/>
     </>
   )
 }

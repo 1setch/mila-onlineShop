@@ -1,0 +1,74 @@
+.button {
+  @include reset-button;
+  padding: 18px 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width:fit-content;
+
+  height: var(--button-height);
+  
+  border-radius: var(--border-radius-small);
+
+  font-size: 14px;
+  cursor: pointer;
+
+  transition:
+    background-color var(--transition-duration),
+    color var(--transition-duration),
+    border-color var(--transition-duration),
+    transform var(--transition-duration);
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  @include hover {
+    transform: scale(1.05);
+  }
+ 
+}
+
+.light {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+
+  @include hover {
+    background-color: var(--color-accent);
+    color: var(--color-light);
+  }
+}
+
+.outline {
+  background-color: transparent;
+  color: var(--color-dark);
+  border: var(--border);
+
+  @include hover {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+  }
+}
+
+.dark {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+
+  @include hover {
+    background-color: var(--color-accent);
+  }
+}
+
+.ghost {
+  background: none;
+  border: none;
+  padding: 0;
+  height: auto;
+
+  color: inherit;
+
+  @include hover {
+    opacity: 0.7;
+  }
+}

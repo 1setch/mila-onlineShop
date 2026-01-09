@@ -1,0 +1,24 @@
+.navWrapper {
+  position: static; // ❗ важно
+}
+
+.nav {
+  display: flex;
+
+  @include mobile {
+      display: none;
+    }
+  
+
+  Button {
+    font-size: 14px;
+    color:inherit;
+    padding: 6px 18px;
+    @include tablet {
+      padding: 6px 10px
+    }
+    @include mobile {
+      display: none;
+    }
+  }
+}

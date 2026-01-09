@@ -1,0 +1,31 @@
+.menu {
+  position: fixed;
+  inset: 0;
+  background-color: var(--color-light);
+  z-index: 1000;
+  color: black;
+  transform: translateX(-100%);
+  transition: transform 0.35s ease;
+  //width: 100%;
+  //margin: 0 auto;
+}
+
+.open {
+  transform: translateX(0);
+}
+
+.nav {
+  padding: 120px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  a {
+    font-size: 20px;
+  }
+}
+
+.account {
+  margin-top: auto;
+  padding: 24px;
+  border-top: var(--border);
+}
