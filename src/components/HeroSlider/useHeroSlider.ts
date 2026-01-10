@@ -2,22 +2,24 @@ import { useEffect, useState } from 'react';
 
 interface UseHeroSliderParams {
   slidesCount: number;
-  autoPlayDelay?: number;
+  delay?: number;
 }
 
 export function useHeroSlider({
   slidesCount,
-  autoPlayDelay = 5000,
+  delay = 5000,
 }: UseHeroSliderParams) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveIndex(prev => (prev + 1) % slidesCount);
-    }, autoPlayDelay);
+    if (slidesCount <= 1) return;
 
-    return () => clearInterval(timer);
-  }, [slidesCount, autoPlayDelay]);
+    const interval = setInterval(() => {
+      setActiveIndex(prev => (prev + 1) % slidesCount);
+    }, delay);
+
+    return () => clearInterval(interval);
+  }, [slidesCount, delay]);
 
   const goToSlide = (index: number) => {
     setActiveIndex(index);

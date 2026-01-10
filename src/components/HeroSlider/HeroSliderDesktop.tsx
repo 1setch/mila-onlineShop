@@ -1,5 +1,6 @@
-import styles from './HeroSlider.module.scss';
-import type { HeroSlideData } from './types';
+import styles from "./HeroSlider.module.scss";
+import Button from "../Button/Button";
+import type { HeroSlideData } from "./types";
 
 interface HeroSliderDesktopProps {
   slides: HeroSlideData[];
@@ -15,23 +16,24 @@ export function HeroSliderDesktop({
   const slide = slides[activeIndex];
 
   return (
-    <div className={styles.desktop}>
-      <img
-        src={slide.imageDesktop}
-        alt={slide.title}
-        className={styles.image}
-      />
+    <div
+      className={styles.desktop}
+      style={{ backgroundImage: `url(${slide.imageDesktop})` }}
+    >
+      <div className="container">
+        <div className={styles.content}>
+          <h1>{slide.title}</h1>
 
-      <div className={styles.content}>
-        <h1>{slide.title}</h1>
-        <p>{slide.subtitle}</p>
-        <a href={slide.ctaLink}>{slide.ctaText}</a>
+          {slide.subtitle && <p>{slide.subtitle}</p>}
+
+          <Button variant="light">{slide.ctaText}</Button>
+        </div>
       </div>
-
-      <div className={styles.controls}>
+      <div className={styles.dots}>
         {slides.map((_, index) => (
           <button
             key={index}
+            className={index === activeIndex ? styles.dotActive : styles.dot}
             onClick={() => onSelectSlide(index)}
           />
         ))}

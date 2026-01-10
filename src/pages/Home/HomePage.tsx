@@ -4,13 +4,16 @@ import Button from "../../components/Button/Button";
 import styles from "./HomePage.module.scss";
 import Header from "../../components/Header/Header";
 import NavMenuCard from "../../components/Header/NavMenu/MegaMenu/MegaMenuCard";
+import { HeroSlider } from "../../components/HeroSlider/HeroSlider";
+import { heroSlidesMock } from '../../components/HeroSlider/mock';
 
 const HomePage = () => {
   return (
     <>
         <Header/>
-        <div className={styles.home}></div>
-        <div className="container">
+        {/* <div className={styles.home}></div> */}
+        <HeroSlider slides={heroSlidesMock}/>
+        {/* <div className="container">
             
            <div className={styles.test}>
             <Button variant="outline" onClick={()=>console.log("click")}>
@@ -31,7 +34,7 @@ const HomePage = () => {
               img="/src/assets/bg/menubanner.png"
             />
             </div>
-        </div>  
+        </div>   */}
     </>
   );
 };
