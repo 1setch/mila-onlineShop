@@ -1,0 +1,67 @@
+/* Header.module.scss */
+.root {
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+  transition: background-color 0.7s ease, box-shadow 0.7s ease;
+  color:var(--color-light);
+
+  &.scrolled {
+    background-color: var(--color-light);
+    color:var(--color-dark);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  }
+  @include hover{
+    background-color: var(--color-light);
+    color:var(--color-dark);
+  }
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 84px;
+}
+.logo{
+    padding: 18px 24px;
+    color: var(--color-light);
+    cursor: pointer;
+    color: inherit;
+    transition-duration: var(--transition-duration);
+    @include hover{
+        background-color: var(--color-accent);
+        color: var(--color-light);
+        transition-duration: var(--transition-duration);
+    }
+}
+
+.burger {
+  display: none;
+  padding: 20px;
+  width: 88px;
+  color: inherit;
+
+  @include mobile {
+    display: block;
+    font-size: 24px;
+    background: none;
+    border: none;
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 5px;
+  Button{
+
+    align-self: center;
+
+    @include mobile{
+      &:first-child{
+      display: none;
+    }
+    }
+  }
+}
+
