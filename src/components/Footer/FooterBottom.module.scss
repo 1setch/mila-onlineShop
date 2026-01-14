@@ -1,0 +1,17 @@
+.bottom{
+  padding: 50px 90px;
+  display: flex;
+  justify-content: space-between;
+
+  @include mobile{
+    flex-direction: column-reverse;
+    gap: 40px;
+    padding: 50px 20px;
+  }
+}
+
+.copyright{
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}

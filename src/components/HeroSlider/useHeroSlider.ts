@@ -7,7 +7,7 @@ interface UseHeroSliderParams {
 
 export function useHeroSlider({
   slidesCount,
-  delay = 5000,
+  delay = 15000,
 }: UseHeroSliderParams) {
   const [activeIndex, setActiveIndex] = useState(0);
 

@@ -1,0 +1,22 @@
+.promo{
+    background-image: url("../../assets/bg/promobanner.png");
+    background-repeat: no-repeat; /* чтобы не повторялось */
+    background-position: center center; /* позиционирование */
+    background-size: cover; /* растянуть на весь блок */
+    background-attachment: scroll; 
+    padding: 131px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    align-items: center;
+    color: var(--color-light);
+    
+}
+.supertitle{
+    font-size: 17px;
+    text-transform: uppercase;
+}
+.subtitle{
+    font-size: 22px;
+}

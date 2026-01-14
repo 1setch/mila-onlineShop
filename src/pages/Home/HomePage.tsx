@@ -5,36 +5,39 @@ import styles from "./HomePage.module.scss";
 import Header from "../../components/Header/Header";
 import NavMenuCard from "../../components/Header/NavMenu/MegaMenu/MegaMenuCard";
 import { HeroSlider } from "../../components/HeroSlider/HeroSlider";
-import { heroSlidesMock } from '../../components/HeroSlider/mock';
+import { heroSlidesMock } from "../../components/HeroSlider/mock";
+import Footer from "../../components/Footer/Footer";
+import PromoBanner from "../../components/PromoBanner/PromoBanner";
 
 const HomePage = () => {
   return (
     <>
-        <Header/>
-        {/* <div className={styles.home}></div> */}
-        <HeroSlider slides={heroSlidesMock}/>
-        {/* <div className="container">
-            
-           <div className={styles.test}>
-            <Button variant="outline" onClick={()=>console.log("click")}>
-              хуй
-            </Button>          
-            <Button variant="dark" onClick={()=>console.log("click")}>
-              хуй
-            </Button>          
-            <Button variant="light" onClick={()=>console.log("click")}>
-              хуй
-            </Button>          
-            <Button variant="ghost" onClick={()=>console.log("click")}>
-              хуй
-            </Button>          
-            <NavMenuCard
-              title="privet"
-              subTitle="loh"
-              img="/src/assets/bg/menubanner.png"
-            />
-            </div>
-        </div>   */}
+      <Header />
+
+      <HeroSlider slides={heroSlidesMock} />
+      <div className="container">
+        <div className={styles.test}>
+          <Button variant="outline" onClick={() => console.log("click")}>
+            хуй
+          </Button>
+          <Button variant="dark" onClick={() => console.log("click")}>
+            хуй
+          </Button>
+          <Button variant="light" onClick={() => console.log("click")}>
+            хуй
+          </Button>
+          <Button variant="ghost" onClick={() => console.log("click")}>
+            хуй
+          </Button>
+          <NavMenuCard
+            title="privet"
+            subTitle="loh"
+            img="/src/assets/bg/menubanner.png"
+          />
+        </div>
+      </div>
+      <PromoBanner />
+      <Footer />
     </>
   );
 };

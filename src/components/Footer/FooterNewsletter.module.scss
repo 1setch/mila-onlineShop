@@ -1,0 +1,13 @@
+.newsletter{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.description{
+    margin: 0;
+}
+.socials{
+  display: flex;
+  gap: 20px;
+  color: var(--color-gray);
+}

@@ -1,0 +1,11 @@
+.list{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.link{
+  text-decoration: none;
+  margin-bottom: 6px;
+  white-space: nowrap;
+}
