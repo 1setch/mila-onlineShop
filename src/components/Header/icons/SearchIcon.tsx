@@ -1,3 +1,4 @@
+// SearchIcon.tsx
 
 const SearchIcon = () => {
     return (

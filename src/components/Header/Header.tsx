@@ -1,3 +1,4 @@
+// Header.tsx
 import PromoBar from "./PromoBar/PromoBar";
 
 import styles from "./Header.module.scss";

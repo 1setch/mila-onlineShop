@@ -9,7 +9,7 @@ const HomePage = () => {
   return (
     <>
         <Header/>
-        <div className={styles.home}></div>
+       <div className={styles.home}></div>
         <div className="container">
             
            <div className={styles.test}>

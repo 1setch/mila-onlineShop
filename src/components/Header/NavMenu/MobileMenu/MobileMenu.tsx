@@ -1,3 +1,4 @@
+// MobileMenu.tsx
 import styles from './MobileMenu.module.scss';
 
 type Props = {

@@ -1,3 +1,4 @@
+// Logo.tsx
 const Logo = () => (
   <div>
     <svg

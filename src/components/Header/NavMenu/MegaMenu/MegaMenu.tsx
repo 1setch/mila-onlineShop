@@ -1,3 +1,4 @@
+// MegaMenu.tsx
 import styles from "./MegaMenu.module.scss";
 import MegaMenuLinksList from "./MegaMenuLinksList";
 import MegaMenuCard from "./MegaMenuCard";
