@@ -1,4 +1,5 @@
 import styles from './HeroSlider.module.scss';
+import  Button  from '../Button/Button';
 import type { HeroSlideData } from './types';
 
 interface HeroSliderMobileProps {
@@ -22,9 +23,9 @@ export function HeroSliderMobile({
         className={styles.image}
       />
 
-      <div className={styles.content}>
+      <div className={styles.mobileContent}>
         <h1>{slide.title}</h1>
-        <a href={slide.ctaLink}>{slide.ctaText}</a>
+        <Button variant="light">{slide.ctaText}</Button>
       </div>
 
       <div className={styles.dots}>
