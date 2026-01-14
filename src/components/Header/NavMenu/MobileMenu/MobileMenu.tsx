@@ -1,5 +1,6 @@
 // MobileMenu.tsx
-import styles from './MobileMenu.module.scss';
+import Button from "../../../Button/Button";
+import styles from "./MobileMenu.module.scss";
 
 type Props = {
   isOpen: boolean;
@@ -7,17 +8,32 @@ type Props = {
 
 const MobileMenu = ({ isOpen }: Props) => {
   return (
-    <div className={`${styles.menu} ${isOpen ? styles.open : ''}`}>
-      <nav className={styles.nav}>
-        <a>New Arrivals</a>
-        <a>Collections</a>
-        <a>Swimwear</a>
-        <a>About Us</a>
-        <a>Demos</a>
-      </nav>
+    <div className={`${styles.menu} ${isOpen ? styles.open : ""}`}>
+      <div className="container">
+        <nav className={styles.nav}>
+          <Button variant="ghost">
+            <a href="#">New Arrivals</a>
+          </Button>
+          <Button variant="ghost">
+            <a href="#">Collections</a>
+          </Button>
+          <Button variant="ghost">
+            <a href="#">Swimwear</a>
+          </Button>
+          <Button variant="ghost">
+            <a href="#">About Us</a>
+          </Button>
+          <Button variant="ghost">
+            <a href="#">Demos</a>
+          </Button>
+        </nav>
 
-      <div className={styles.account}>
-        <a>Account</a>
+        <div className={styles.account}>
+          <hr />
+          <Button variant="ghost">
+            <a>Account</a>
+          </Button>
+        </div>
       </div>
     </div>
   );
