@@ -1,3 +1,4 @@
+// NavMenu.tsx
 
 import Button from '../../Button/Button';
 import styles from './NavMenu.module.scss';

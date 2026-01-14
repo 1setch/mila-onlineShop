@@ -1,3 +1,4 @@
+// MegaMenuCard.tsx
 import Button from "../../../Button/Button";
 import styles from "./MegaMenuCard.module.scss";
 

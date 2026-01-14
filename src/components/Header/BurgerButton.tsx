@@ -1,3 +1,4 @@
+// BurgerButton.tsx
 interface BurgerButtonProps {
   isOpen: boolean;
   onClick: () => void;

@@ -1,3 +1,4 @@
+// HeaderActions.tsx
 import Button from "../Button/Button";
 import SearchIcon from "./icons/SearchIcon.tsx";
 import CartIcon from "./icons/CartIcon.tsx";

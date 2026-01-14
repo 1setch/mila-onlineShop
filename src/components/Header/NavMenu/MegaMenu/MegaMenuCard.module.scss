@@ -1,3 +1,4 @@
+/* MegaMenuCard.module.scss */
 .card {
   position: relative;
   width: 323px;
@@ -20,8 +21,8 @@
   transition: transform 0.3s ease;
 
   @include hover {
-    //transform: translateY(-4px);
-
+    // transform: scale(1.05);
+    // border-radius: var(--border-radius-small);
     &::after {
       opacity: 0.35;
     }
