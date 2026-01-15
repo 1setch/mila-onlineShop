@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+// useHeroSlider.ts
+import { useEffect, useRef, useState } from 'react';
 
 interface UseHeroSliderParams {
   slidesCount: number;
@@ -7,22 +8,42 @@ interface UseHeroSliderParams {
 
 export function useHeroSlider({
   slidesCount,
+<<<<<<< HEAD
   delay = 15000,
+=======
+  delay = 7000,
+>>>>>>> feature/hero-slider
 }: UseHeroSliderParams) {
   const [activeIndex, setActiveIndex] = useState(0);
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  useEffect(() => {
+  const clearTimer = () => {
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
+      timerRef.current = null;
+    }
+  };
+
+  const startTimer = () => {
     if (slidesCount <= 1) return;
 
-    const interval = setInterval(() => {
+    clearTimer();
+
+    timerRef.current = setInterval(() => {
       setActiveIndex(prev => (prev + 1) % slidesCount);
     }, delay);
+  };
 
-    return () => clearInterval(interval);
+  useEffect(() => {
+    startTimer();
+    return clearTimer;
   }, [slidesCount, delay]);
 
   const goToSlide = (index: number) => {
-    setActiveIndex(index);
+    if (index !== activeIndex) {
+      setActiveIndex(index);
+      startTimer(); // сброс таймера при клике
+    }
   };
 
   return {

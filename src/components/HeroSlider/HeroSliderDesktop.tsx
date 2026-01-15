@@ -1,5 +1,7 @@
+// HeroSliderDesktop.tsx
 import styles from "./HeroSlider.module.scss";
 import Button from "../Button/Button";
+import { DotButton } from "./DotButton";
 import type { HeroSlideData } from "./types";
 
 interface HeroSliderDesktopProps {
@@ -13,27 +15,31 @@ export function HeroSliderDesktop({
   activeIndex,
   onSelectSlide,
 }: HeroSliderDesktopProps) {
-  const slide = slides[activeIndex];
-
   return (
-    <div
-      className={styles.desktop}
-      style={{ backgroundImage: `url(${slide.imageDesktop})` }}
-    >
-      <div className="container">
-        <div className={styles.content}>
-          <h1>{slide.title}</h1>
-
-          {slide.subtitle && <p>{slide.subtitle}</p>}
-
-          <Button variant="light">{slide.ctaText}</Button>
+    <div className={styles.desktop}>
+      {slides.map((slide, index) => (
+        <div
+          key={slide.id}
+          className={`${styles.slide} ${
+            index === activeIndex ? styles.active : ""
+          }`}
+          style={{ backgroundImage: `url(${slide.imageDesktop})` }}
+        >
+          <div className="container">
+            <div className={styles.content}>
+              <h1>{slide.title}</h1>
+              {slide.subtitle && <p>{slide.subtitle}</p>}
+              <Button variant="light">{slide.ctaText}</Button>
+            </div>
+          </div>
         </div>
-      </div>
+      ))}
+      
       <div className={styles.dots}>
         {slides.map((_, index) => (
-          <button
+          <DotButton
             key={index}
-            className={index === activeIndex ? styles.dotActive : styles.dot}
+            isActive={index === activeIndex}
             onClick={() => onSelectSlide(index)}
           />
         ))}

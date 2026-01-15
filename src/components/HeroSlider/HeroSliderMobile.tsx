@@ -1,6 +1,8 @@
-import styles from './HeroSlider.module.scss';
-import  Button  from '../Button/Button';
-import type { HeroSlideData } from './types';
+// HeroSliderMobile.tsx
+import styles from "./HeroSlider.module.scss";
+import Button from "../Button/Button";
+import { DotButton } from "./DotButton";
+import type { HeroSlideData } from "./types";
 
 interface HeroSliderMobileProps {
   slides: HeroSlideData[];
@@ -13,28 +15,34 @@ export function HeroSliderMobile({
   activeIndex,
   onSelectSlide,
 }: HeroSliderMobileProps) {
-  const slide = slides[activeIndex];
-
   return (
     <div className={styles.mobile}>
-      <img
-        src={slide.imageMobile}
-        alt={slide.title}
-        className={styles.image}
-      />
+      {slides.map((slide, index) => (
+        <div
+          key={slide.id}
+          className={`${styles.mobileSlide} ${
+            index === activeIndex ? styles.active : ""
+          }`}
+        >
+          <img
+            src={slide.imageMobile}
+            alt={slide.title}
+            className={styles.image}
+          />
 
-      <div className={styles.mobileContent}>
-        <h1>{slide.title}</h1>
-        <Button variant="light">{slide.ctaText}</Button>
-      </div>
+          <div className={styles.mobileContent}>
+            <h1>{slide.title}</h1>
+            {slide.subtitle && <p>{slide.subtitle}</p>}
+            <Button variant="light">{slide.ctaText}</Button>
+          </div>
+        </div>
+      ))}
 
       <div className={styles.dots}>
         {slides.map((_, index) => (
-          <button
+          <DotButton
             key={index}
-            className={
-              index === activeIndex ? styles.dotActive : styles.dot
-            }
+            isActive={index === activeIndex}
             onClick={() => onSelectSlide(index)}
           />
         ))}
