@@ -1,3 +1,4 @@
+// HeroSlider.tsx
 import styles from './HeroSlider.module.scss';
 import { useHeroSlider } from './useHeroSlider';
 import { HeroSliderDesktop } from './HeroSliderDesktop';
