@@ -8,11 +8,7 @@ interface UseHeroSliderParams {
 
 export function useHeroSlider({
   slidesCount,
-<<<<<<< HEAD
-  delay = 15000,
-=======
   delay = 7000,
->>>>>>> feature/hero-slider
 }: UseHeroSliderParams) {
   const [activeIndex, setActiveIndex] = useState(0);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);

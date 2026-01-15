@@ -4,15 +4,10 @@ import Button from "../../components/Button/Button";
 import styles from "./HomePage.module.scss";
 import Header from "../../components/Header/Header";
 import NavMenuCard from "../../components/Header/NavMenu/MegaMenu/MegaMenuCard";
-<<<<<<< HEAD
 import { HeroSlider } from "../../components/HeroSlider/HeroSlider";
 import { heroSlidesMock } from "../../components/HeroSlider/mock";
 import Footer from "../../components/Footer/Footer";
 import PromoBanner from "../../components/PromoBanner/PromoBanner";
-=======
-import { heroSlidesMock } from '../../components/HeroSlider/mock';
-import { HeroSlider } from "../../components/HeroSlider/HeroSlider";
->>>>>>> feature/hero-slider
 
 const HomePage = () => {
   return (

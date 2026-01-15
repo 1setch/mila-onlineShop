@@ -11,7 +11,7 @@ import hero3Desktop from '@/assets/images/hero/hero-3-desktop.jpg';
 import hero3Mobile from '@/assets/images/hero/hero-3-mobile.png';
 
 import hero4Desktop from '@/assets/images/hero/hero-4-desktop.jpg';
-import hero4Mobile from '@/assets/images/hero/hero-4-mobile.png';
+import hero4Mobile from '@/assets/images/hero/hero-44-mobile.png';
 
 
 
@@ -45,7 +45,7 @@ export const heroSlidesMock: HeroSlideData[] = [
   },
   {
     id: 'new-arrivals3',
-    title: 'Брюнетки рулят дура',
+    title: 'Ебанный гпт',
     subtitle: 'Minimal silhouettes. Premium fabrics.',
     imageDesktop: hero4Desktop,
     imageMobile: hero4Mobile,
