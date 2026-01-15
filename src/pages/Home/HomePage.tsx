@@ -29,11 +29,11 @@ const HomePage = () => {
           <Button variant="ghost" onClick={() => console.log("click")}>
             хуй
           </Button>
-          <NavMenuCard
+          {/* <NavMenuCard
             title="privet"
             subTitle="loh"
             img="/src/assets/bg/menubanner.png"
-          />
+          /> */}
         </div>
       </div>
       <PromoBanner />
