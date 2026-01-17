@@ -1,0 +1,96 @@
+// ProductGallery.module.scss
+.gallery {
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  
+  @include tablet {
+    gap: 16px;
+  }
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+}
+
+.imageWrapper {
+  width: 100%;
+ // aspect-ratio: 375/570; /* Сохраняем пропорции */
+  overflow: hidden;
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+/* Мобильная галерея */
+.mobileGallery {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slidesContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 375/570;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  
+  &.active {
+    opacity: 1;
+  }
+}
+
+.slideImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-gray-alt);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.3s ease;
+  
+  &.active {
+    background-color: var(--color-dark);
+  }
+  
+  &:hover:not(.active) {
+    background-color: var(--color-gray);
+  }
+}
