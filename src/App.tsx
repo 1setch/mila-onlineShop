@@ -1,13 +1,13 @@
-import HomePage from "./pages/Home/HomePage"
-
+import CollectionPage from "./pages/Collections/CollectionPage";
+import HomePage from "./pages/Home/HomePage";
 
 function App() {
-
   return (
     <>
-      <HomePage/>
+      <HomePage />
+      {/* <CollectionPage /> */}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
