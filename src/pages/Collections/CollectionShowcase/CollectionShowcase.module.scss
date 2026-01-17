@@ -1,0 +1,41 @@
+// CollectionShowcase.module.scss - упрощенна
+
+.showcase {
+  padding: 60px 0;
+  
+  @include mobile {
+    padding: 40px 0;
+  }
+}
+
+.layout {
+  display: flex;
+  gap: 48px;
+  
+  @include tablet {
+    gap: 32px;
+  }
+  
+  @include mobile {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+
+.products {
+  flex: 1;
+}
+
+.productsHeader {
+  margin-bottom: 32px;
+  
+  @include mobile {
+    margin-bottom: 24px;
+  }
+}
+
+.resultsCount {
+  font-size: 14px;
+  color: var(--color-gray);
+  margin: 0;
+}

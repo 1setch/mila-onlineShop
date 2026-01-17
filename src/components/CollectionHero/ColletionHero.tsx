@@ -14,7 +14,7 @@ export const CollectionHero = ({
   imageDesktop,
   imageMobile,
 }: CollectionHeroProps) => {
-  const isMobile = useMediaQuery('(max-width: 767px)');
+  const isMobile = useMediaQuery('(max-width: 450px)');
 
   const backgroundImage = isMobile ? imageMobile : imageDesktop;
 

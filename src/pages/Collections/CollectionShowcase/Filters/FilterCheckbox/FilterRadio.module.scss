@@ -1,0 +1,45 @@
+// FilterRadio.module.scss
+
+.radio {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.input {
+  display: none;
+  
+  &:checked + .customRadio {
+    border-color: var(--color-dark);
+    
+    .radioDot {
+      display: block;
+    }
+  }
+}
+
+.customRadio {
+  @include square(20px);
+  @include flex-center(true);
+  
+  border: 1px solid var(--color-gray-alt);
+  border-radius: 50%;
+  background-color: var(--color-light);
+  transition: all var(--transition-duration);
+  flex-shrink: 0;
+}
+
+.radioDot {
+  display: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-dark);
+}
+
+.label {
+  font-size: 14px;
+  color: var(--color-dark);
+}

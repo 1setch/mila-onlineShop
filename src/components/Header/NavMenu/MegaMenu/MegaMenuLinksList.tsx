@@ -12,7 +12,7 @@ const MegaMenuLinksList = ({ title, links }: MegaMenuLinksListProps) => {
     <div className={styles.list}>
       <span className={styles.title}>{title}</span>
       {links.map((link) => (
-        <Button variant="ghost"> <a href="">{link}</a> </Button>
+        <Button key={`${title}-${link}`} variant="ghost"> <a href="">{link}</a> </Button>
       ))}
     </div>
   );

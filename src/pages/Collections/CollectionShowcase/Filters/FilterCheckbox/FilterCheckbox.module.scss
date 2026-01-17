@@ -1,0 +1,51 @@
+// FilterCheckbox.module.scss
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.input {
+  display: none;
+  
+  &:checked + .customCheckbox {
+    background-color: var(--color-dark);
+    border-color: var(--color-dark);
+    
+    .checkIcon {
+      display: block;
+    }
+  }
+}
+
+.customCheckbox {
+  @include square(20px);
+  @include flex-center(true);
+  
+  border: var(--border);
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-light);
+  transition: all var(--transition-duration);
+  flex-shrink: 0;
+}
+
+.checkIcon {
+  display: none;
+  width: 12px;
+  height: 9px;
+  color: var(--color-light);
+}
+
+.label {
+  font-size: 14px;
+  color: var(--color-dark);
+}
+
+.count {
+  font-size: 14px;
+  color: var(--color-gray);
+  margin-left: auto;
+}
