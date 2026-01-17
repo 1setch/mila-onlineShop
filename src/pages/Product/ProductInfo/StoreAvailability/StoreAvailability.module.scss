@@ -1,0 +1,35 @@
+// StoreAvailability.module.scss
+.storeAvailability {
+  padding-top: 16px;
+  border-top: 1px solid var(--color-gray-alt);
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 0 12px 0;
+  color: var(--color-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.storesList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.store {
+  display: flex;
+  justify-content: space-between;
+}
+
+.storeName {
+  font-size: 14px;
+  color: var(--color-dark);
+}
+
+.storeAddress {
+  font-size: 14px;
+  color: var(--color-gray);
+}

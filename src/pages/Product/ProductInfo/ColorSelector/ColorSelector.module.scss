@@ -1,0 +1,34 @@
+// ColorSelector.module.scss
+.colorSelector {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.colorOption {
+  @include reset-button;
+  
+  width: 64px;
+  height: 99px;
+  border: 1px solid var(--color-gray-alt);
+  border-radius: 2px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    border-color: var(--color-dark);
+    transform: translateY(-2px);
+  }
+  
+  &.selected {
+    border-color: var(--color-dark);
+    border-width: 2px;
+  }
+}
+
+.colorImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

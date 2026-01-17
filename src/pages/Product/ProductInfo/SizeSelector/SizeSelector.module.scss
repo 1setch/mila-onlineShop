@@ -1,0 +1,41 @@
+// SizeSelector.module.scss
+.sizeSelector {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.sizeOption {
+  @include reset-button;
+  
+  min-width: 48px;
+  height: 48px;
+  border: 1px solid var(--color-gray-alt);
+  border-radius: 2px;
+  background-color: var(--color-light);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-dark);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  &:hover:not(:disabled) {
+    border-color: var(--color-dark);
+  }
+  
+  &.selected {
+    border-color: var(--color-dark);
+    background-color: var(--color-dark);
+    color: var(--color-light);
+  }
+  
+  &.unavailable {
+    color: var(--color-gray);
+    text-decoration: line-through;
+    cursor: not-allowed;
+    
+    &:hover {
+      border-color: var(--color-gray-alt);
+    }
+  }
+}

@@ -1,0 +1,106 @@
+// ProductPage.module.scss
+
+.main {
+  padding-top: 40px;
+  padding-bottom: 80px;
+  
+  @include mobile {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+}
+
+.productSection {
+  margin-bottom: 80px;
+  
+  @include mobile {
+    margin-bottom: 40px;
+  }
+}
+
+.productLayout {
+  display: grid;
+  grid-template-columns: 770px 1fr;
+  gap: 60px;
+  
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+.gallery {
+  @include mobile-above {
+    width: 770px;
+  }
+}
+
+.info {
+  // Правый блок занимает оставшееся пространство
+}
+
+.detailsSection {
+  margin-bottom: 80px;
+  
+  @include mobile {
+    margin-bottom: 40px;
+  }
+}
+
+.sloganSection {
+  margin-bottom: 60px;
+  text-align: center;
+  
+  @include mobile {
+    margin-bottom: 40px;
+  }
+}
+
+.slogan {
+  h2 {
+    font-size: 32px;
+    font-weight: 400;
+    margin: 0;
+    
+    @include mobile {
+      font-size: 24px;
+    }
+  }
+}
+
+.bannerSection {
+  margin-bottom: 80px;
+  
+  @include mobile {
+    margin-bottom: 40px;
+  }
+}
+
+.banner {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  
+  @include mobile {
+    height: 200px;
+  }
+}
+
+.bannerImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+:global {
+  header {
+    background-color: var(--color-light) !important;
+    color: var(--color-dark) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+  }
+}
