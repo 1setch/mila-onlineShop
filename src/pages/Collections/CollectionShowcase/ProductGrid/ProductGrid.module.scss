@@ -1,0 +1,74 @@
+// ProductGrid.module.scss
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  
+  @include mobile {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+/* Скелетоны для загрузки */
+.skeletonCard {
+  display: flex;
+  flex-direction: column;
+  animation: pulse 1.5s infinite;
+}
+
+.skeletonImage {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background-color: var(--color-gray-alt);
+  border-radius: var(--border-radius);
+  margin-bottom: 16px;
+}
+
+.skeletonText {
+  height: 16px;
+  background-color: var(--color-gray-alt);
+  border-radius: 4px;
+  margin-bottom: 8px;
+  
+  &:first-of-type {
+    width: 80%;
+  }
+  
+  &:last-of-type {
+    width: 60%;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Состояние пустого списка */
+.emptyState {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 80px 0;
+}
+
+.emptyMessage {
+  font-size: 18px;
+  color: var(--color-dark);
+  margin-bottom: 8px;
+}
+
+.emptyHint {
+  font-size: 14px;
+  color: var(--color-gray);
+}

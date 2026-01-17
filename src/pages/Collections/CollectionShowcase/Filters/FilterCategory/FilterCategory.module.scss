@@ -1,0 +1,52 @@
+// FilterCategory.module.scss
+
+.category {
+  border-bottom: 1px solid var(--color-gray-alt);
+  padding-bottom: 24px;
+  
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.toggleButton {
+  @include reset-button;
+  @include square(24px);
+  @include flex-center(true);
+  
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--color-gray);
+  transition: color var(--transition-duration);
+  
+  @include hover {
+    color: var(--color-dark);
+  }
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.colorOptions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}

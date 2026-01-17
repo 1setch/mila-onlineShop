@@ -1,9 +1,6 @@
-import React from "react";
 import Button from "../../components/Button/Button";
-
 import styles from "./HomePage.module.scss";
 import Header from "../../components/Header/Header";
-import NavMenuCard from "../../components/Header/NavMenu/MegaMenu/MegaMenuCard";
 import { HeroSlider } from "../../components/HeroSlider/HeroSlider";
 import { heroSlidesMock } from "../../components/HeroSlider/mock";
 import Footer from "../../components/Footer/Footer";
@@ -29,11 +26,7 @@ const HomePage = () => {
           <Button variant="ghost" onClick={() => console.log("click")}>
             хуй
           </Button>
-          {/* <NavMenuCard
-            title="privet"
-            subTitle="loh"
-            img="/src/assets/bg/menubanner.png"
-          /> */}
+          
         </div>
       </div>
       <PromoBanner />
